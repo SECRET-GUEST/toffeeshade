@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "toffeetext.helloWorld",
-        "title": "Hello World"
+        "command": "toffeeshade.replace",
+        "title": "Extract and Replace Text"
       }
     ]
   },
