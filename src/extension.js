@@ -30,7 +30,7 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const node_html_parser_1 = require("node-html-parser");
 function activate(context) {
-    let disposable = vscode.commands.registerCommand('toffeeshade.replace', () => {
+    let disposable = vscode.commands.registerCommand('toffeeshade.transmutation', () => {
         var _a;
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
