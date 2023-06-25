@@ -47,27 +47,37 @@ export function activate(context: vscode.ExtensionContext) {
                 vscode.window.showErrorMessage('No folder open in workspace');
                 return;
             }
-
-            fs.writeFile(path.join(workspaceFolderPath, 'textes.json'), JSON.stringify(texts, null, 4), (err) => {
+            
+            const langFolderPath = path.join(workspaceFolderPath, 'lang');
+            if (!fs.existsSync(langFolderPath)){
+                fs.mkdirSync(langFolderPath);
+            }
+            
+            fs.writeFile(path.join(langFolderPath, 'textes.json'), JSON.stringify(texts, null, 4), (err) => {
                 if (err) {
                     vscode.window.showErrorMessage(`Error writing the textes.json file: ${err.message}`);
                     return;
                 }
-
-                // Écriture du script JS dans un fichier
+            
                 const scriptContent = `
-/*
-use this function to replace the text where it should be (translatedTexts is your json file in this example)
-fillTexts(translatedTexts);
-*/
-function fillTexts(texts) {
-    Object.keys(texts).forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.textContent = texts[id];
-        }
+// This script allows you to change language / txt at the begining of your page
+// and when you press a button with the class "changLanguage"
+function loadLanguage(lang) {
+    $.getJSON('lang/' + lang + '.json', function(data) {
+      $.each(data, function(key, val) {
+        $('#' + key).replaceWith(val);
+      });
     });
-}
+  }
+
+  $(document).ready(function() {
+    // load default language
+    loadLanguage('en');
+
+    // Change language when click on a button
+    $('.changeLanguage').click(function() {
+      var lang = $(this).data('lang');
+      loadLanguage(lang);
 `;
 
                 fs.writeFile(path.join(workspaceFolderPath, 'filltext.js'), scriptContent, (err) => {
