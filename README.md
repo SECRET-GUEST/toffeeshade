@@ -43,3 +43,26 @@ The JSON file and the JavaScript file are saved in the root of your workspace.
 - The modified HTML content is then written back into the original file.
 
 Note: Make sure to install the required dependencies and adjust the port number according to your needs.
+
+
+# :scroll: License
+
+This repository is released under the [MIT License](LICENSE). Please see the `LICENSE` file for more information.
+
+# :question: Support & Questions
+
+If you have any questions or need support, please feel free to open an issue or join my twitter.
+
+
+# :gem: Recommendations  
+
+If you're looking for more tools to boost your productivity, these repositories are worth checking out:
+
+- [HTML Text Extractor](https://github.com/SECRET-GUEST/tiny-scripts/tree/ALL/python/Lists/textractor): This Python script extracts all text nodes from HTML files and stores them in a JSON file. It's a perfect complement to our VSCode plugin that enables similar functionality directly in your editor.
+
+- [JSON to HTML Integrator](https://github.com/SECRET-GUEST/tiny-scripts/tree/ALL/python/Lists/json2html): Another Python script that takes a JSON file and integrates its content into a corresponding HTML file. Used in tandem with the HTML Text Extractor, it streamlines the process of text extraction and reintegration in web development.
+
+- [JSON Word Replacer](https://github.com/SECRET-GUEST/tiny-scripts/blob/ALL/python/Lists/json%20word%20replacer/README.md): This Python script allows you to replace specific words in a JSON file. It's a handy tool for mass-editing JSON data, especially in the context of localizing or translating web content.
+
+
+
