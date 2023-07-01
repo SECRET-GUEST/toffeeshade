@@ -11,6 +11,7 @@
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
+  "icon": "resources/toffeeshade.png",
   "contributes": {
     "commands": [
       {
@@ -19,6 +20,11 @@
       }
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SECRET-GUEST/transmutation_vscode.ext.git"
+  },
+  "license": "MIT",
   "scripts": {
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
