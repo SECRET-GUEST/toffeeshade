@@ -1,8 +1,9 @@
 {
   "name": "transmutation",
   "displayName": "transmutation",
-  "description": "This extension automatically extracts all text from HTML tags within your selected files or directories, and it generates a convenient JSON file containing the texts for easy translation.",
+  "description": "Designed to streamline the website localization process. This extension automatically extracts all text from HTML tags within your selected files or directories, and it generates a convenient JSON file containing the texts for easy translation.",
   "version": "0.0.1",
+  "publisher": "toffeeshade",
   "engines": {
     "vscode": "^1.79.0"
   },
